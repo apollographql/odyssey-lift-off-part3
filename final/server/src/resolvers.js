@@ -15,6 +15,29 @@ const resolvers = {
       return dataSources.trackAPI.getModule(id);
     },
   },
+  Mutation: {
+    // increments a track's numberOfViews property
+    incrementTrackViews: (_, { id }, { dataSources }) => {
+      return dataSources.trackAPI
+        .incrementTrackViews(id)
+        .then((track) => {
+          return {
+            code: '200',
+            success: true,
+            message: `Successfully incremented number of views for track ${id}`,
+            track,
+          };
+        })
+        .catch((err) => {
+          return {
+            code: err.extensions.response.status,
+            success: false,
+            message: err.extensions.response.statusText,
+            track: null,
+          };
+        });
+    },
+  },
   Track: {
     author: ({ authorId }, _, { dataSources }) => {
       return dataSources.trackAPI.getAuthor(authorId);
