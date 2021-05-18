@@ -4,7 +4,7 @@ import { widths, colors } from '../styles';
 
 /**
  * Content Section component renders content (mainly text/mdown based)
- * for course detail and lesson detail
+ * for track and module details
  */
 const ContentSection = ({ children }) => {
   return <ContentDiv>{children}</ContentDiv>;
