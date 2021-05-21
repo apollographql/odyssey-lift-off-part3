@@ -3,8 +3,8 @@ import { useQuery, gql } from '@apollo/client';
 import { Layout, QueryResult } from '../components';
 import TrackDetail from '../components/track-detail';
 
-/** TRACK gql query to retrieve a specific track by its ID */
-export const TRACK = gql`
+/** GET_TRACK gql query to retrieve a specific track by its ID */
+export const GET_TRACK = gql`
   query getTrack($trackId: ID!) {
     track(id: $trackId) {
       id
@@ -29,11 +29,11 @@ export const TRACK = gql`
 `;
 
 /**
- * Track Page fetches a track's data from the gql query TRACK
+ * Track Page fetches a track's data from the gql query GET_TRACK
  * and provides it to the TrackDetail component to display
  */
 const Track = ({ trackId }) => {
-  const { loading, error, data } = useQuery(TRACK, {
+  const { loading, error, data } = useQuery(GET_TRACK, {
     variables: { trackId },
   });
 
