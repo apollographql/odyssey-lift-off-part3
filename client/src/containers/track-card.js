@@ -36,7 +36,7 @@ const TrackCard = ({ track }) => {
 export default TrackCard;
 
 /** Track Card styled components */
-const CardContainer = styled.div({
+const CardContainer = styled('div')({
   borderRadius: 6,
   color: colors.text,
   backgroundSize: 'cover',
@@ -63,6 +63,7 @@ const CardContainer = styled.div({
     backgroundColor: colors.pink.lightest,
   },
   cursor: 'pointer',
+  textDecoration: 'none',
 });
 
 const CardContent = styled.div({
