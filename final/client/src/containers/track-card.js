@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { colors, mq } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 
 /**
  * Track Card component renders basic info in a card format
