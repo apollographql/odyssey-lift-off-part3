@@ -4,9 +4,9 @@ import { widths, colors } from '../styles';
 
 /**
  * Content Section component renders content (mainly text/mdown based)
- * for track and module details
+ * for course detail and lesson detail
  */
-const ContentSection = ({ children }) => {
+const ContentSection: React.FC<React.PropsWithChildren> = ({ children })=> {
   return <ContentDiv>{children}</ContentDiv>;
 };
 
