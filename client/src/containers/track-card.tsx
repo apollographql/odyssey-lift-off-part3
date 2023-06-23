@@ -8,7 +8,7 @@ import type { Track } from '../__generated__/graphql'
  * Track Card component renders basic info in a card format
  * for each track populating the tracks grid homepage.
  */
-const TrackCard = ({ track }: { track: Track }) => {
+const TrackCard: React.FC<{ track: Track }> = ({ track }) => {
   const { title, thumbnail, author, length, modulesCount } = track;
 
   return (
