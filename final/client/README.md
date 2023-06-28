@@ -1,3 +1,3 @@
 # Catstronauts - client
 
-The starting point of the `client` code for Odyssey Lift-off III course.
+The final state of the `client` code after finishing the Odyssey Lift-off III course.
