@@ -34,11 +34,13 @@ const Track = () => {
   const { loading, error, data } = useQuery(GET_TRACK, {
     variables: { trackId },
   });
-  return <Layout>
-    <QueryResult error={error} loading={loading} data={data}>
-      <TrackDetail track={data?.track} />
-    </QueryResult>
-  </Layout>;
+  return (
+    <Layout>
+      <QueryResult error={error} loading={loading} data={data}>
+        <TrackDetail track={data?.track} />
+      </QueryResult>
+    </Layout>
+  );
 };
 
 export default Track;
