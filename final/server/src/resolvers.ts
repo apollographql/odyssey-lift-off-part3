@@ -1,4 +1,4 @@
-import { Resolvers } from "./types"
+import { Resolvers } from "./types";
 
 export const resolvers: Resolvers = {
   Query: {
@@ -7,7 +7,7 @@ export const resolvers: Resolvers = {
       return dataSources.trackAPI.getTracksForHome();
     },
     // get a single track by ID, for the track page
-    track: (_, {id}, {dataSources}) => {
+    track: (_, { id }, { dataSources }) => {
       return dataSources.trackAPI.getTrack(id);
     },
   },
@@ -15,7 +15,7 @@ export const resolvers: Resolvers = {
     author: ({ authorId }, _, { dataSources }) => {
       return dataSources.trackAPI.getAuthor(authorId);
     },
-    modules: ({id}, _, {dataSources}) => {
+    modules: ({ id }, _, { dataSources }) => {
       return dataSources.trackAPI.getTrackModules(id);
     },
   },
