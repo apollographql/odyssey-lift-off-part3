@@ -1,7 +1,7 @@
 import React from 'react';
 // this adds custom jest matchers from jest-dom
 import '@testing-library/jest-dom/extend-expect';
-import { InMemoryCache } from '@apollo/client';
+import { InMemoryCache, gql } from '@apollo/client';
 import { renderApolloWithRouter, cleanup, waitForElement } from '../../utils/test-utils';
 import Tracks from '../tracks';
 
