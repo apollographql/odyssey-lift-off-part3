@@ -1,45 +1,51 @@
 type Query {
-  "Get tracks array for homepage grid"
+  "Fetch a list of tracks for the homepage grid"
   tracksForHome: [Track!]!
-  "Fetch a specific track, provided a track's ID"
-  track(id: ID!): Track
+  "Fetch a specific track by ID"
+  track(
+    "The ID of the track to fetch"
+    id: ID!
+  ): Track
 }
 
-"A track is a group of Modules that teaches about a specific topic"
+"A group of modules that teaches about a specific topic"
 type Track {
+  "The unique identifier for the track"
   id: ID!
-  "The track's title"
+  "The title of the track"
   title: String!
-  "The track's main author"
+  "The track's primary author"
   author: Author!
-  "The track's main illustration to display in track card or track page detail"
+  "The URL of the track's illustration, used in the track card and track detail page"
   thumbnail: String
   "The track's approximate length to complete, in minutes"
   length: Int
-  "The number of modules this track contains"
+  "The number of modules contained in this track"
   modulesCount: Int
-  "The track's complete description, can be in Markdown format"
+  "The track's full description, which may include Markdown"
   description: String
-  "The number of times a track has been viewed"
+  "The number of times this track has been viewed"
   numberOfViews: Int
-  "The track's complete array of Modules"
+  "The ordered list of modules that make up this track"
   modules: [Module!]!
 }
 
-"A Module is a single unit of teaching. Multiple Modules compose a Track"
+"A single unit of teaching. Multiple modules compose a track"
 type Module {
+  "The unique identifier for the module"
   id: ID!
-  "The Module's title"
+  "The title of the module"
   title: String!
-  "The Module's length in minutes"
+  "The module's length, in minutes"
   length: Int
 }
 
-"Author of a complete Track"
+"An author of a track or module"
 type Author {
+  "The unique identifier for the author"
   id: ID!
-  "Author's first and last name"
+  "The author's first and last name"
   name: String!
-  "Author's profile picture url"
+  "The URL of the author's profile picture"
   photo: String
 }
