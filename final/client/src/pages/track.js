@@ -1,9 +1,9 @@
-import React from 'react';
-import { gql } from '@apollo/client';
-import { useQuery } from '@apollo/client/react';
-import { useParams } from 'react-router-dom';
-import { Layout, QueryResult } from '../components';
-import TrackDetail from '../components/track-detail';
+import React from "react";
+import { gql } from "@apollo/client";
+import { useQuery } from "@apollo/client/react";
+import { useParams } from "react-router-dom";
+import { Layout, QueryResult } from "../components";
+import TrackDetail from "../components/track-detail";
 
 /** GET_TRACK gql query to retrieve a specific track by its ID */
 const GET_TRACK = gql`

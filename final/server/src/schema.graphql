@@ -2,10 +2,7 @@ type Query {
   "Fetch a list of tracks for the homepage grid"
   tracksForHome: [Track!]!
   "Fetch a specific track by ID"
-  track(
-    "The ID of the track to fetch"
-    id: ID!
-  ): Track!
+  track("The ID of the track to fetch" id: ID!): Track!
 }
 
 "A group of modules that teaches about a specific topic"
